@@ -8,5 +8,9 @@ Simple JXA Script for adding email-signatures into Microsoft Outlook for Mac aft
 - Change the `AppleScript` dropdown to `JavaScript`
 - Copy the contents of `gen.js` into `Script Editor.app` and make any required changes to the `template`
     - Ensure you keep the `#name#`, `#title#`, and `#phone#` sections as these are used later during string substitution.
-- Save the script as an Application and ship it to your users
-    - Optional: Replace the icon for the app with the instructions [here](https://support.apple.com/en-gb/guide/mac-help/mchlp2313/mac)
+- Save the Application into the `./build` directory and with **NO CODE SIGNING** as `Bink Signature Generator.app`
+- From the `./build` directory, execute `gon sign.json`
+- This should eventually return a `Bink Signature Generator.zip` file
+- Extract this zip file, rename the resulting directory with a `.app` suffix.
+- ???
+- Profit!
